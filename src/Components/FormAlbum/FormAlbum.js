@@ -1,38 +1,81 @@
 import React from 'react';
 
-class FormAlbum extends React.Component {
+class htmlFormAlbum extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      title: '',
+      band: '',
+      genre: '',
+      releaseYear: '',
+    };
+  }
+
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  }
 
   render() {
     return (
       <form>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="album" type="text" name="album" class="validate" />
-            <label for="album">Album</label>
+        <div className="row">
+          <div className="input-field col s12">
+            <input
+              id="title"
+              type="text"
+              name="title"
+              className="validate"
+              onChange={this.handleChange}
+              value={this.state.title}
+            />
+            <label htmlFor="title" className="input-field">Title</label>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="band" type="text" name="band" class="validate" />
-            <label for="band">Band</label>
+        <div className="row">
+          <div className="input-field col s12">
+            <input
+              id="band"
+              type="text"
+              name="band"
+              className="validate"
+              onChange={this.handleChange}
+              value={this.state.band} />
+            <label htmlFor="band" className="input-field">Band</label>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="genre" type="text" name="genre" class="validate" />
-            <label for="genre">Genre</label>
+        <div className="row">
+          <div className="input-field col s12">
+            <input
+              id="genre"
+              type="text"
+              name="genre"
+              className="validate"
+              onChange={this.handleChange}
+              value={this.state.gerne} />
+            <label htmlFor="genre" className="input-field">Genre</label>
           </div>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="releaseYear" type="number" name="releaseYear" class="validate" />
-            <label for="releaseYear">Release Year</label>
+        <div className="row">
+          <div className="input-field col s12">
+            <input
+              id="releaseYear"
+              type="number"
+              name="releaseYear"
+              className="validate"
+              onChange={this.handleChange}
+              value={this.state.releaseYear} />
+            <label htmlFor="releaseYear" className="releaseYear">Release Year</label>
           </div>
         </div>
-        <button class="waves-effect waves-light btn red darken-4" type="button">Salvar</button>
+        <button className="waves-effect waves-light btn red darken-4" type="button">Salvar</button>
       </form>
     );
   }
 }
 
-export default FormAlbum;
+export default htmlFormAlbum;

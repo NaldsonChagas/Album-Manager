@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import Header from '../Header/Header';
-import Container from '../Container/Container';
-import FormAlbum from '../FormAlbum/FormAlbum';
+import Header from '../../Components/Header/Header';
+import Container from '../../Components/Utils/Container/Container';
+import FormAlbum from '../../Components/FormAlbum/FormAlbum';
 
 function Home() {
   return (
