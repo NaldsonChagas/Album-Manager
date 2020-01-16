@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper red darken-4">
           <div className="container">
             <a href="/" class="brand-logo">Album Manager</a>
           </div>

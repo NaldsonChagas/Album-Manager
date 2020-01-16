@@ -29,7 +29,7 @@ class FormAlbum extends React.Component {
             <label for="releaseYear">Release Year</label>
           </div>
         </div>
-        <a class="waves-effect waves-light btn" type="button">Salvar</a>
+        <button class="waves-effect waves-light btn red darken-4" type="button">Salvar</button>
       </form>
     );
   }
