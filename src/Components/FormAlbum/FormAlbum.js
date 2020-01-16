@@ -1,6 +1,6 @@
 import React from 'react';
 
-class htmlFormAlbum extends React.Component {
+class FormAlbum extends React.Component {
 
   constructor(props) {
     super(props);
@@ -18,6 +18,11 @@ class htmlFormAlbum extends React.Component {
     this.setState({
       [name]: value,
     });
+  }
+
+  handleClick = () => {
+    console.log(this.state);
+    this.props.addAlbum(this.state);
   }
 
   render() {
@@ -72,10 +77,10 @@ class htmlFormAlbum extends React.Component {
             <label htmlFor="releaseYear" className="releaseYear">Release Year</label>
           </div>
         </div>
-        <button className="waves-effect waves-light btn red darken-4" type="button">Salvar</button>
+        <button className="waves-effect waves-light btn red darken-4" type="button" onClick={this.handleClick}>Salvar</button>
       </form>
     );
   }
 }
 
-export default htmlFormAlbum;
+export default FormAlbum;
