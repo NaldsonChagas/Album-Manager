@@ -4,13 +4,13 @@ class FormAlbum extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
+    this.initialState = {
       title: '',
       band: '',
       genre: '',
       releaseYear: '',
-    };
+    }
+    this.state = this.initialState;
   }
 
   handleChange = (event) => {
@@ -22,6 +22,7 @@ class FormAlbum extends React.Component {
 
   handleClick = () => {
     this.props.addAlbum(this.state);
+    this.setState(this.initialState);
   }
 
   render() {
@@ -60,7 +61,7 @@ class FormAlbum extends React.Component {
               name="genre"
               className="validate"
               onChange={this.handleChange}
-              value={this.state.gerne} />
+              value={this.state.genre} />
             <label htmlFor="genre" className="input-field">Genre</label>
           </div>
         </div>
@@ -73,7 +74,7 @@ class FormAlbum extends React.Component {
               className="validate"
               onChange={this.handleChange}
               value={this.state.releaseYear} />
-            <label htmlFor="releaseYear" className="releaseYear">Release Year</label>
+            <label htmlFor="releaseYear" className="input-field">Release Year</label>
           </div>
         </div>
         <button className="waves-effect waves-light btn red darken-4" type="button" onClick={this.handleClick}>Salvar</button>
