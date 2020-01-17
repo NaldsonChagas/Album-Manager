@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import Header from '../../Components/Header/Header';
 import Container from '../../Components/Utils/Container/Container';
 import FormAlbum from '../../Components/FormAlbum/FormAlbum';
+import Table from '../../Components/Table/Table';
 
 class Home extends React.Component {
 
@@ -24,6 +25,9 @@ class Home extends React.Component {
       <Fragment>
         <Header />
         <Container>
+          <div className="col s6 left">
+            <Table data={this.state.albuns} />
+          </div>
           <div className="col s6 right">
             <FormAlbum addAlbum={this.addAlbum} />
           </div>

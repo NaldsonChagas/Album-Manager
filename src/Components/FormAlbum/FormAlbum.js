@@ -21,7 +21,6 @@ class FormAlbum extends React.Component {
   }
 
   handleClick = () => {
-    console.log(this.state);
     this.props.addAlbum(this.state);
   }
 
