@@ -4,7 +4,7 @@ const Table = (props) => {
   return (
     <table>
       <Thead />
-      <Tbody data={props.data} />
+      <Tbody data={props.data} deleteAlbum={props.deleteAlbum} />
     </table>
   );
 }
@@ -17,6 +17,7 @@ const Thead = () => {
         <th>Band</th>
         <th>Genre</th>
         <th>Release year</th>
+        <th>Delete</th>
       </tr>
     </thead>
   );
@@ -32,6 +33,7 @@ const Tbody = (props) => {
           <td>{row.band}</td>
           <td>{row.genre}</td>
           <td>{row.releaseYear}</td>
+          <td><button type="button" className="btn red darken-4" onClick={() => props.deleteAlbum(index)}>Delete</button></td>
         </tr>
       )}
     </tbody>
