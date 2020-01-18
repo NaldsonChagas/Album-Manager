@@ -3,6 +3,7 @@ import Header from '../../Components/Header/Header';
 import Container from '../../Components/Utils/Container/Container';
 import FormAlbum from '../../Components/FormAlbum/FormAlbum';
 import Table from '../../Components/Table/Table';
+import Alert from '../../utils/Alerts';
 
 class Home extends React.Component {
 
@@ -18,12 +19,14 @@ class Home extends React.Component {
     this.setState({
       albums: [...this.state.albums, album],
     });
+    Alert.showAlert('green', 'Album added successfully');
   }
 
   deleteAlbum = (indexAlbumDelete) => {
     this.setState({
       albums: this.state.albums.filter((album, index) => index !== indexAlbumDelete),
     });
+    Alert.showAlert('green', 'Album removed');
   }
 
   render() {

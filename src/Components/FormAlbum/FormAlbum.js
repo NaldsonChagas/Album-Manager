@@ -77,7 +77,7 @@ class FormAlbum extends React.Component {
             <label htmlFor="releaseYear" className="input-field">Release Year</label>
           </div>
         </div>
-        <button className="waves-effect waves-light btn red darken-4" type="button" onClick={this.handleClick}>Salvar</button>
+        <button className="waves-effect waves-light btn red darken-4" type="button" onClick={this.handleClick}>Save</button>
       </form>
     );
   }
